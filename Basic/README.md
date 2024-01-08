@@ -1,4 +1,5 @@
 # Practice-Express-JS Basic Installation
+
 Welcome to the "Basic Express Installation" repository! This quick guide will walk you through the essentials of setting up Express.js and creating your first "Hello World" program.
 
 Installation Steps:
@@ -10,6 +11,7 @@ Creating Your First Express App:
 
 Open the index.js file in your preferred code editor.
 install Express by running the following command on your terminal (npm install express )
+We can use ES6 method so Add "type":"module" in your package.json file
 Import Express by adding import express from 'express'; at the top.
 Create an instance of the Express application with const app = express();.
 Define a route for the root path ('/') by adding app.get('/', (req, res) => res.send('Hello World!'));.
