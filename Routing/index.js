@@ -37,6 +37,20 @@ app.get("/", function (req, res) {
 app.use("/company", employee);
 app.use("/company", instructor);
 
+//routes parameter
+
+app.get("/employee/delete/:id", (req, res) => {
+  res.send(`the employee by id : ${req.params.id} is deleted`);
+});
+app.get("/employee/:job/:id", (req, res) => {
+  console.log(
+    `the employee role ${req.params.job} and his id is ${req.params.id}`
+  );
+  res.send(
+    `the employee role ${req.params.job} and his id is ${req.params.id}`
+  );
+});
+
 app.get("*", function (req, res) {
   res.send("<h1>Error....</h1>");
 });
