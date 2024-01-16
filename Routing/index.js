@@ -3,10 +3,11 @@ const app = express();
 const port = 8080;
 import employee from "./routes/employee.js";
 import instructor from "./routes/instructor.js";
+import users from "./routes/users.js";
 
-app.get("/", function (req, res) {
-  res.send("<h1>wellcome to routng</h1>");
-});
+// app.get("/", function (req, res) {
+//   res.send("<h1>wellcome to routng</h1>");
+// });
 // app.get(/about/, function (req, res) {
 //   res.send("<h1>About Page</h1>");
 // });
@@ -36,6 +37,7 @@ app.get("/", function (req, res) {
 
 app.use("/company", employee);
 app.use("/company", instructor);
+app.use("/user", users);
 
 //routes parameter
 
