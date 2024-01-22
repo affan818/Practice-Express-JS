@@ -4,6 +4,7 @@ const port = 8080;
 import employee from "./routes/employee.js";
 import instructor from "./routes/instructor.js";
 import users from "./routes/users.js";
+import web from "./routes/web.js";
 
 // app.get("/", function (req, res) {
 //   res.send("<h1>wellcome to routng</h1>");
@@ -39,6 +40,7 @@ app.use("/company", employee);
 app.use("/company", instructor);
 app.use("/user", users);
 
+app.use("/", web);
 //routes parameter
 
 app.get("/employee/delete/:id", (req, res) => {
